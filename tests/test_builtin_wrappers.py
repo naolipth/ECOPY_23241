@@ -33,8 +33,8 @@ def test_dol():
 
 
 def test_contains_value(test_list):
-    assert bw.contains_values(test_list, 1) is True
-    assert bw.contains_values(test_list, 0) is False
+    assert bw.contains_value(test_list, 1) is True
+    assert bw.contains_value(test_list, 0) is False
 
 
 def test_number_of_elements_in_list(test_list):
