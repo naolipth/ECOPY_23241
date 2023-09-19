@@ -2,7 +2,7 @@
 venv
 .idea
 notebooks/.*
-src/.*
+src/*/.*
 tests/.*
 
 
