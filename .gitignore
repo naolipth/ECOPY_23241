@@ -1,6 +1,9 @@
 .venv
 venv
 .idea
+notebooks/.*
+src/.*
+tests/.*
 
 
 ### PyCharm template
