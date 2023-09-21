@@ -4,8 +4,10 @@ Weekly tests are held on Wednesdays between 19:00-20:30, and consultations are o
 
 ### Theory
 
-Theory file(s) available in the **theory** forlder. Required for the **1st theoretic** test: 
-    * Properties of Expected Value (2)
-    * Properties of Variance (3)
-    * Variance decomposition of non-independent random variables (1)
-    * Studentization / Standardization (1)
+Theory file(s) available in the **theory** forlder. 
+
+Required for the **1st theoretic** test: 
+* Properties of Expected Value (2)
+* Properties of Variance (3)
+* Variance decomposition of non-independent random variables (1)
+* Studentization / Standardization (1)
