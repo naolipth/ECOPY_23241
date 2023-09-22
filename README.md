@@ -15,5 +15,5 @@ Required for the **1st theoretic** test:
 
 ## Practice
 
-**[Python Classes](https://realpython.com/python3-object-oriented-programming/)**
+**[Python Classes](https://realpython.com/python3-object-oriented-programming/)** (If the link does not work, open in **incognito  mode**.)
 
