@@ -116,7 +116,7 @@ def test_uniform_distribution_moments():
     lower_bound = 1
     upper_bound = 6
     rand_gen = random
-    expected = [7/2, 5/12, 0, -6/5]
+    expected = [7 / 2, 5 / 12, 0, -6 / 5]
 
     # Act
     dist = dst.UniformDistribution(rand_gen, lower_bound, upper_bound)
@@ -159,6 +159,7 @@ def test_normal_distribution_pdf():
     # Assert
     assert result == approx(expected)
 
+
 def test_normal_distribution_cdf():
     # Arrange
     expected_value = 1
@@ -173,6 +174,7 @@ def test_normal_distribution_cdf():
 
     # Assert
     assert result == approx(expected)
+
 
 def test_normal_distribution_ppf():
     # Arrange
@@ -246,7 +248,6 @@ def test_normal_distribution_moments():
     assert result == approx(expected)
 
 
-
 def test_cauchy_distribution_input():
     # Arrange
     x0 = 1
@@ -280,6 +281,7 @@ def test_cauchy_distribution_pdf():
     # Assert
     assert result == approx(expected)
 
+
 def test_cauchy_distribution_cdf():
     # Arrange
     x0 = 2
@@ -294,6 +296,7 @@ def test_cauchy_distribution_cdf():
 
     # Assert
     assert result == approx(expected)
+
 
 def test_cauchy_distribution_ppf():
     # Arrange
