@@ -14,6 +14,10 @@ Required for the **1st theoretic** test:
 * Variance decomposition of non-independent random variables (1)
 * Studentization / Standardization (1)
 
+Required for the **2nd theoretic** test:
+* Convergences (4)
+* Slutsky's Theorem (2)
+* Consistency (1)
 
 ## Practice
 
