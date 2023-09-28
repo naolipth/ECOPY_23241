@@ -4,6 +4,7 @@ venv
 notebooks/.*
 src/*/.*
 tests/.*
+*hidden*
 
 
 ### PyCharm template
