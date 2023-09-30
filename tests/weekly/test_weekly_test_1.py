@@ -29,7 +29,7 @@ def odd_list():
 
 @pytest.fixture()
 def test_dict():
-    return {'a': [1, 2, 3], 'b': [5, 6, 7], 'c': [8, 9, 10]}
+    return {'a': [1, 2, 3], 'd': [1, 2, 3], 'b': [5, 6, 7], 'c': [8, 9, 10]}
 
 
 def test_evens_from_list(long_list, even_list):
@@ -127,7 +127,7 @@ def test_squared_odds(test_list_2):
 def test_reverse_sort_by_key(test_dict):
     # Arrange
     input_dict = test_dict
-    expected = {'c': [8, 9, 10], 'b': [5, 6, 7], 'a': [1, 2, 3]}
+    expected = {'d': [1, 2, 3], 'c': [8, 9, 10], 'b': [5, 6, 7], 'a': [1, 2, 3], }
 
     # Act
     result = wt.reverse_sort_by_key(input_dict)
