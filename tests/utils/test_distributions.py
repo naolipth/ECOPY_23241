@@ -278,7 +278,6 @@ class TestCauchyDistribution:
         # Assert
         assert result == approx(expected)
 
-
     def test_gen_random(self):
         # Arrange
         location = 2
@@ -328,15 +327,295 @@ class TestCauchyDistribution:
         with pytest.raises(Exception, match='Moments undefined'):
             dist.mvsk()
 
-    # Arrange
-    x0 = 2
-    gamma = 4
+
+class TestLogisticDistribution:
+    location = 3
+    scale = 3.3
     rand_gen = random
-    random.seed(42)
 
-    # Act
-    dist = dst.CauchyDistribution(rand_gen, x0, gamma)
+    def test_input(self):
+        # Arrange
 
-    # Assert
-    with pytest.raises(Exception, match='Moments undefined'):
-        dist.mvsk()
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result1 = dist.location
+        result2 = dist.scale
+        result3 = dist.rand
+
+        # Assert
+        assert result1 == self.location
+        assert result2 == self.scale
+        assert result3 == self.rand_gen
+
+    def test_pdf(self):
+        # Arrange
+        test_value = 3.7
+        expected = 0.07491174022979666
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.pdf(test_value)
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_cdf(self):
+        # Arrange
+        test_value = 3.7
+        expected = 0.5528323503326417
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.cdf(test_value)
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_ppf(self):
+        # Arrange
+        test_value = 0.7
+        expected = 5.796082939277771
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.ppf(test_value)
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_gen_rand(self):
+        # Arrange
+        expected = [4.890494614545768, -9.08829764563687, -0.19853658521740059, -1.115274088121958, 6.39143489627801,
+                    5.437528551442299, 9.973560798518974, -4.760273651519319,
+                    1.9608660223975298, -8.494197066211642, -1.2029503036748164, 3.070692506244696, -8.887787063165854,
+                    -1.5987973143950907, 5.041153228265085, 3.594832884090807,
+                    -1.1682316143275804, 4.1910709320078645, 7.772835129759591, -13.597759102631315, 7.696131155619216,
+                    5.766896388636377, 0.8148124914340094, -2.5844419025151257,
+                    13.255718160967225, 0.7609259980423357, -4.5258471501419235, -4.373037700864995, 8.65977275986942,
+                    4.389348485425751, 7.723808980556951, 6.277765268596625,
+                    3.4790503058864743, 14.843577761919189, 1.3639467816739945, 3.6894330875902384, 8.218665794255237,
+                    4.594791176165999, 9.037481492997145, 4.029313053295263,
+                    5.868243137310822, -7.018903603659071, -1.026715897585591, 0.03541728217669915, -5.06908342985585,
+                    -0.9356421569284756, -4.214284358021298, -0.1499672908205949,
+                    4.837050203831584, 1.1703091099750509, 1.2462462102578824, -1.3820682310709103, -0.3330342090484901,
+                    11.889249904455728, 5.014368369575562, 4.464081001771206,
+                    -2.206010229656729, 6.267649534717904, -2.3893178927406735, 1.3768612232827007, 18.008645693725573,
+                    4.89869823859244, 3.755012941404183, 5.557694874085183,
+                    8.542689042329002, 7.1002696662134355, -1.0051905917330783, -8.240674156134277, 0.4433336391393925,
+                    -0.3201788855274543, -1.3527371083702127, 12.254310652303905,
+                    9.462961676670162, 0.4314797827684127, 5.122007629805321, 1.6017926022184226, 10.822550636112258,
+                    2.4556132408394853, -0.36849480951604097, -0.6850461478011374,
+                    3.8141641664267487, -0.4048322801831592, 4.127373227653882, 10.171774737137756, 1.653720025091197,
+                    -1.1897758662804767, 22.813714807975046, 3.125762295285856,
+                    -4.59851797880116, -6.922678151816346, -3.911289253779622, 4.720210127371877, 7.413766984675341,
+                    1.9640878895415166, -5.87912456827137, 1.4071532623956535,
+                    21.309686206371207, 3.3847445849787063, 14.595598372548812, 9.011877479720216, -11.703191035273809,
+                    6.128548131705801, 5.513422333313912, 3.488900640107457]
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        dist.rand.seed(42)
+        result = [dist.gen_rand() for _ in range(104)]
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_mean(self):
+        # Arrange
+        expected = 3
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.mean()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_variance(self):
+        # Arrange
+        expected = 35.82666397595437
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.variance()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_skewness(self):
+        # Arrange
+        expected = 0
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.skewness()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_ex_kurtosis(self):
+        # Arrange
+        expected = 1.2
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.ex_kurtosis()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_mvsk(self):
+        # Arrange
+        expected = [3, 35.82666397595437, 0, 1.2]
+
+        # Act
+        dist = dst.LogisticDistribution(self.rand_gen, self.location, self.scale)
+        result = dist.mvsk()
+
+        # Assert
+        assert result == approx(expected)
+
+
+class TestChiSquaredistribution:
+    degree_of_freedom = 1.1
+    rand_gen = random
+
+    def test_input(self):
+        # Arrange
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result1 = dist.dof
+        result2 = dist.rand
+
+        # Assert
+        assert result1 == self.degree_of_freedom
+        assert result2 == self.rand_gen
+
+    def test_pdf(self):
+        # Arrange
+        test_value = 3.7
+        expected = 0.03688274050827955
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.pdf(test_value)
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_cdf(self):
+        # Arrange
+        test_value = 3.7
+        expected = 0.9373915184962788
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.cdf(test_value)
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_ppf(self):
+        # Arrange
+        test_value = 0.95
+        expected = 4.083997198848105
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.ppf(test_value)
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_gen_rand(self):
+        # Arrange
+        expected = [0.9575064383890693, 0.0019760013574234006, 0.16264812489377542, 0.10941464336492936,
+                    1.3990986881976346, 1.1072359292775515, 2.792871440193376, 0.019141828343995942,
+                    0.37881061282764794, 0.0027174519230520207, 0.10523326712892933, 0.5547934544992152,
+                    0.002200699841339705, 0.0880682721638088, 0.997430577023333, 0.6558115003055914,
+                    0.1068718276050943, 0.7853705309833245, 1.8860542477573594, 0.00017035668016866432,
+                    1.85717430066405, 1.203666678805163, 0.24583310043291276, 0.055731688633074115,
+                    4.352493357604958, 0.24066203475937803, 0.02154642145620562, 0.023265712539038655,
+                    2.2342279651032917, 0.8319552417763427, 1.8675717267841347, 1.3623276074408814,
+                    0.6324705581174398, 5.163676801053626, 0.3038680499231531, 0.6753185891765239, 2.0578755330475094,
+                    0.8820723194643166, 2.3899423453732225, 0.7486632352109283,
+                    1.234271626981233, 0.005949364328237066, 0.11378633870773883, 0.17935952796429155,
+                    0.01636286600053116, 0.1184419150035495, 0.025189343249626076, 0.1660036938114138,
+                    0.9435852167002345, 0.2822644872925927, 0.2905847177687687, 0.09712849159921537, 0.1536572485090279,
+                    3.6801427358332193, 0.9902593526388412, 0.8499682684043329,
+                    0.06658613068485307, 1.359080809902508, 0.061107744508571635, 0.30535454053347866,
+                    6.845718337160764, 0.9596545283305253, 0.6890726913005981, 1.1418768759102567,
+                    2.186825907525089, 1.6399882788710707, 0.11487190876218506, 0.003111742272939515,
+                    0.21197267716610288, 0.15449774564769936, 0.09841644102579185, 3.857014534637372,
+                    2.5702160695715, 0.21095943343499687, 1.019269889852583, 0.33218347504034473, 3.1768168913654327,
+                    0.4511119216506573, 0.15135913698741715, 0.1321246888407862,
+                    0.7016413024219676, 0.1490349469929402, 0.77077677123757, 2.8810428711540323, 0.3386334425225475,
+                    0.10585240254517161, 9.49558069770342, 0.5648503167352018,
+                    0.020771837478063774, 0.006258479316118481, 0.029285811145265895, 0.9135921430527165,
+                    1.752648670117106, 0.37925075753760595, 0.010791638588903089, 0.3088639589695633,
+                    8.657506907189884, 0.6138915927789751, 5.035229786664457, 2.3792552773013544, 0.0004794752956110301,
+                    1.3148608261454935, 1.1290415823167277, 0.6344335041203677]
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        dist.rand.seed(42)
+        result = [dist.gen_rand() for _ in range(104)]
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_mean(self):
+        # Arrange
+        expected = 1.1
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.mean()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_variance(self):
+        # Arrange
+        expected = 2.2
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.variance()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_skewness(self):
+        # Arrange
+        expected = 2.696799449852968
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.skewness()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_ex_kurtosis(self):
+        # Arrange
+        expected = 10.909090909090908
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.ex_kurtosis()
+
+        # Assert
+        assert result == approx(expected)
+
+    def test_mvsk(self):
+        # Arrange
+        expected = [1.1, 2.2, 2.696799449852968, 10.909090909090908]
+
+        # Act
+        dist = dst.ChiSquaredDistribution(self.rand_gen, self.degree_of_freedom)
+        result = dist.mvsk()
+
+        # Assert
+        assert result == approx(expected)
