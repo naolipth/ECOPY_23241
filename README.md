@@ -20,11 +20,11 @@ Required for the **2nd theoretic** test:
 * Consistency (1)
 
 Required for the **3rd theoretic** test:
-* Laws of Large Numbers (2)
+* [Laws of Large Numbers (2)](https://www.youtube.com/watch?v=ycuPP72_DVU) 
 * Law of the iterated logarithm(1)
-* Central Limit theorem (1)
-* Delta method (1)
-* Asymptotically Efficient Estimator (1)
+* [Central Limit Theorem (1)](https://www.youtube.com/watch?v=zeJD6dqJ5lo)
+* [Delta method (1)](https://www.youtube.com/watch?v=Tv1pEA8RngE)
+* [Asymptotically Efficient Estimator (1)](https://www.youtube.com/watch?v=_iR4uG8MVpA)
 
 ## Practice
 
