@@ -26,6 +26,12 @@ Required for the **3rd theoretic** test:
 * [Delta method (1)](https://www.youtube.com/watch?v=Tv1pEA8RngE)
 * [Asymptotically Efficient Estimator (1)](https://www.youtube.com/watch?v=_iR4uG8MVpA)
 
+Required for the **4th theoretic** test:
+* Gauss-Markov assumption (5) [video with no perfect overlap](https://www.youtube.com/watch?v=QGrRRWUaT2o&list=PLqdN24UCw5hlIrdfErPUgnoIQC4U6cxiL&index=2)
+* OLS unbiasedness (1) [only equation, no proof](https://www.youtube.com/watch?v=X9EkPwWPzSE&list=PLqdN24UCw5hlIrdfErPUgnoIQC4U6cxiL&index=7) 
+* OLS consistency (1) [only equation, no proof](https://www.youtube.com/watch?v=Zq-0MjeQDUs&list=PLqdN24UCw5hlIrdfErPUgnoIQC4U6cxiL&index=8)
+* [Gauss-Markov Theorem (1)](https://www.youtube.com/watch?v=b-tJQ4ZSPu8&list=PLqdN24UCw5hlIrdfErPUgnoIQC4U6cxiL&index=10)
+
 ## Practice
 
 **[Python Classes](https://realpython.com/python3-object-oriented-programming/)** (If the link does not work, open in **incognito  mode**.)
