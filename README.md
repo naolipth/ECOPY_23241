@@ -40,7 +40,7 @@ Required for the **4th theoretic** test:
 
 Required for the **5th theoretic** test (review some major theorems and assumptions):
 
-* [Laws of Large Numbers (2)](https://www.youtube.com/watch?v=ycuPP72_DVU)
+* [Week Law of Large Numbers (1)](https://www.youtube.com/watch?v=ycuPP72_DVU)
 * [Central Limit Theorem (1)](https://www.youtube.com/watch?v=zeJD6dqJ5lo)
 * [Delta method (1)](https://www.youtube.com/watch?v=Tv1pEA8RngE)
 * Gauss-Markov assumption (5) [video with no perfect overlap](https://www.youtube.com/watch?v=QGrRRWUaT2o&list=PLqdN24UCw5hlIrdfErPUgnoIQC4U6cxiL&index=2)
