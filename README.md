@@ -47,11 +47,11 @@ Required for the **5th theoretic** test (review some major theorems and assumpti
 
 Required for the **6th theoretic** test:
 
-* Z-value (1)
-* T-value (1)
+* [Z-value (1)](https://www.youtube.com/watch?v=Wp2nVIzBsE8)
+* [T-value (1)](https://www.youtube.com/watch?v=5ABpqVSx33I)
 * 3 steps of T-test (1)
-* Small sample Wald test (1)
-* Centered R-squared and adjusted R-squared values (2)
+* [Small sample Wald test (1)](https://www.youtube.com/watch?v=l66kDWqloU0)
+* [Centered R-squared](https://www.youtube.com/watch?v=bMccdk8EdGo) and [adjusted R-squared](https://www.youtube.com/watch?v=8W2fGkU5LYU) values (2)
 
 ## Practice
 
