@@ -53,6 +53,12 @@ Required for the **6th theoretic** test:
 * [Small sample Wald test (1)](https://www.youtube.com/watch?v=l66kDWqloU0)
 * [Centered R-squared](https://www.youtube.com/watch?v=bMccdk8EdGo) and [adjusted R-squared](https://www.youtube.com/watch?v=8W2fGkU5LYU) values (2)
 
+Required for the **7th theoretic** test:
+
+* Implications of heteroscedasticity (4)
+* Gauss-Markov assumptions in case of generalized regression model (5)
+* Finite-sample properties of GLS (3)
+
 ## Practice
 
 **[Python Classes](https://realpython.com/python3-object-oriented-programming/)** (If the link does not work, open in *
