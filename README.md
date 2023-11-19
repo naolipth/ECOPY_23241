@@ -59,6 +59,13 @@ Required for the **7th theoretic** test:
 * Gauss-Markov assumptions in case of generalized regression model (5)
 * Finite-sample properties of GLS (3)
 
+Required for the **8th theoretic** test:
+* [Likelihood function (2)](https://www.youtube.com/watch?v=93fPFOf547Q)
+* [Maximum Likelihood Estimator (1)](https://www.youtube.com/watch?v=sguol03tfWo)
+* [Log-likelihood function of Normal distribution (1)](https://www.youtube.com/watch?v=zuweZEzXVLw)
+* [Properties of MLE (4)](https://www.youtube.com/watch?v=lbnoIRSXRiA)
+* Efficiency of MLE (1)
+
 ## Practice
 
 **[Python Classes](https://realpython.com/python3-object-oriented-programming/)** (If the link does not work, open in *
