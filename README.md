@@ -66,6 +66,14 @@ Required for the **8th theoretic** test:
 * [Properties of MLE (4)](https://www.youtube.com/watch?v=lbnoIRSXRiA)
 * Efficiency of MLE (1)
 
+Required for the **9th theoretic** test:
+* Bootstrap Theory (2) (not the entire slide, just the box)
+* Empirical Bootstrap steps (4)
+* Mode's of confidence interval estimation with bootstrap (3)
+* Types of bootstraps mentioned in the slides (6) (names are enough)
+* [Gauss-Markov Theorem (1)](https://www.youtube.com/watch?v=b-tJQ4ZSPu8&list=PLqdN24UCw5hlIrdfErPUgnoIQC4U6cxiL&index=10)
+
+
 ## Practice
 
 **[Python Classes](https://realpython.com/python3-object-oriented-programming/)** (If the link does not work, open in *
@@ -80,3 +88,7 @@ Required for the **8th theoretic** test:
 **[SciPy optimization module](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize)**
 
 **[Example notebook for SciPy optimization](https://github.com/tirthajyoti/Optimization-Python/blob/master/SciPy_optimization.ipynb)**
+
+**[Example for bootstrapping CI in Linear Regression](https://aamir07.medium.com/bootstrapping-confidence-intervals-in-machine-learning-29527698b11e)**
+
+**[Kaggle example for bootstapping CIs](https://www.kaggle.com/code/carloscinelli/stat-504-nonparametric-bootstrap-python)**
