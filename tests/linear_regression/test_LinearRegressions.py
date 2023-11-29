@@ -136,6 +136,30 @@ class TestLinearRegressionNP:
         # Assert
         assert result == approx(expected)
 
+    def test_get_paired_se_and_percentile_ci(self):
+        # Arrange
+        expected = "Paired Bootstraped SE: 0.220, CI: [-0.889, -0.024]"
+
+        # Act
+        result = self.model.get_paired_se_and_percentile_ci(
+            number_of_bootstrap_samples=10000, alpha=0.05, random_seed=42
+        )
+
+        # Assert
+        assert result == approx(expected, abs=1e-3, rel=1e-3)
+
+    def test_get_wild_se_and_normal_ci(self):
+        # Arrange
+        expected = "Wild Bootstraped SE: 0.221, CI: [-0.905, -0.039]"
+
+        # Act
+        result = self.model.get_wild_se_and_normal_ci(
+            number_of_bootstrap_samples=10000, alpha=0.05, random_seed=42
+        )
+
+        # Assert
+        assert result == approx(expected, abs=1e-3, rel=1e-3)
+
 
 class TestLinearRegressionGLS:
     ref_data = pd.read_parquet(
